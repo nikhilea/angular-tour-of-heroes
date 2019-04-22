@@ -1,0 +1,3 @@
+Use http://localhost:8080/test1/test-heroes.json to get Hero[] from C:\Apache\apache-tomcat-docs\test-dir1\test-heroes.json
+
+Use http://localhost:8080/test1/test-heroList.json to get heroList from C:\Apache\apache-tomcat-docs\test-dir1\test-heroList.json
