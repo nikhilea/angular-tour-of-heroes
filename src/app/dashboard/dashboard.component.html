@@ -8,3 +8,16 @@
 </div>
 
 <app-hero-search></app-hero-search>
+
+<div class="checkbox">
+  <label>
+      <input #saveUserNameCheckBox id="saveUserNameCheckBox" type="checkbox" 
+        [checked]="saveUsername" 
+        (change)="onSaveUsernameChanged(saveUserNameCheckBox.checked)" /> Save Username
+  </label>
+  <label>
+    <input #removeUserNameCheckBox id="removeUserNameCheckBox" type="checkbox" 
+      [checked]="removeUsername" 
+      (change)="onRemoveUsernameChanged(removeUserNameCheckBox.checked)" /> Remove Username
+</label>
+</div>

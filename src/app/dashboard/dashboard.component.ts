@@ -9,12 +9,33 @@ import { HeroService } from '../hero.service';
 })
 export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
+  public saveUsername: boolean = true;
+  public removeUsername: boolean = false;
 
   constructor(private heroService: HeroService) { }
 
   ngOnInit() {
     // this.getHeroes();
     this.getHeroList();
+    console.log('Begin DashboardComponent.ngOnInit');
+    console.log('saveUsername is ' + this.saveUsername);
+    console.log('removeUsername is ' + this.removeUsername);
+  }
+
+  public onSaveUsernameChanged(value: boolean){
+    this.saveUsername = value;
+    console.log('saveUsername changed to ' + this.saveUsername);
+
+    this.removeUsername = !value;
+    console.log('removeUsername changed to ' + this.removeUsername);
+  }
+
+  public onRemoveUsernameChanged(value: boolean){
+    this.saveUsername = !value;
+    console.log('saveUsername changed to ' + this.saveUsername);
+
+    this.removeUsername = value;
+    console.log('removeUsername changed to ' + this.removeUsername);
   }
 
   // Array not supported as subscribed object
